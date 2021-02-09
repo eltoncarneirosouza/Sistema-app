@@ -1,0 +1,49 @@
+<form class="example-form" [formGroup]="refeicaoForm" (ngSubmit)="salvarRefeicao()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="nome" id="nome" name="nome">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+        <mat-label class="label">Categoria</mat-label>
+        <input matInput formControlName="categoria" id="categoria" name="categoria">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label class="label">Area</mat-label>
+        <input matInput formControlName="area" id="area" name="area">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label class="label">Imagem</mat-label>
+        <input matInput formControlName="imagem" id="imagem" name="imagem">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label class="label">Instruções</mat-label>
+        <input matInput formControlName="instrucoes" id="instrucoes" name="instrucoes">
+      </mat-form-field>
+   <section class="botaoSalvar">
+       <div class="example-button-row">
+           <button mat-stroked-button type="submit">Salvar</button>
+        </div>
+    </section>   
+    <table>
+      <tr>
+        <th><em>id.</em></th>
+        <th><em>Nome</em></th>
+        <th><em>Categoria</em></th>
+        <th><em>Imagem</em></th>
+        <th><em>Instruções</em></th>
+      </tr>
+      <tr *ngFor="let refeicao of Refeicoes">
+        <td>{{ refeicao.id}}</td>
+        <td>{{ refeicao.nome}}</td>
+        <td>{{ refeicao.categoria }}</td>
+        <td><img src="{{ refeicao.imagem }}" alt=""width="200"></td>
+        <td>{{ refeicao.instrucoes }}</td>
+      </tr>
+    </table> 
+  </form>
+  
+  

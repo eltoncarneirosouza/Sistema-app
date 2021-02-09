@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -91,6 +92,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -124,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "desafio-app"
+  "defaultProject": "desafio-app",
+  "cli": {
+    "analytics": "32e30c92-b310-4595-b988-b29e98f440fc"
+  }
 }
